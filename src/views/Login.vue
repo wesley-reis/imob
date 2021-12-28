@@ -16,6 +16,7 @@
       <img src="../assets/images/icons/whatsapp.png" class="w-4" alt="whatsapp">
       Precisa de Suporte?</p>
   </div>
+  
  
 </div>
 
