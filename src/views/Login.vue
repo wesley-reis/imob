@@ -94,17 +94,18 @@ export default {
   },
   methods:{
     showAlert(){
-      this.$swal({
-        toast: true,
-        position: 'top-end',
-        timerProgressBar:true,
-        showConfirmButton: false,
-        timer: 5000,
-        text: 'is a good day!',
-      });
+      window.Toast.fire({text:"Dados cadastrados com sucesso", icon:"success"})
     }
   }
 
 
 };
 </script>
+<style>
+  .swal2-toast{
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
