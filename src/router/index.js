@@ -13,10 +13,10 @@ const routes = [
   },
 
   {
-    path: "/admin/login",
+    path: "/admin",
     component: LayoutAuth,
 
-    children: [{ path: "", name: "login", component: Login }],
+    children: [{ path: "login", name: "login", component: Login }],
   },
 ];
 

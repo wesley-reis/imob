@@ -1,25 +1,77 @@
 <template>
   <h1 class="text-5xl text-gray-400 mt-4 mb-8">Login</h1>
 
-<div class="w-5/6">
+  <div class="w-5/6">
+    <Input
+      :label="'E-mail:'"
+      :type="'email'"
+      :id="'email'"
+      :placeholder="'Informe seu e-mail'"
+    >
+      <img src="../assets/images/icons/email.png" class="w-5" alt="mail" />
+    </Input>
 
-  <Input :label="'E-mail:'" :type="'email'" :id="'email'" :icon="'email'" :placeholder="'Informe seu e-mail'"/>
+    <Input
+      :label="'Senha:'"
+      :type="'password'"
+      :id="'password'"
+      :placeholder="'Informe sua senha'"
+    >
+      <img
+        src="../assets/images/icons/password.png"
+        class="w-4"
+        alt="password"
+      />
+    </Input>
 
-  <Input :label="'Senha:'" :type="'password'" :id="'password'" :icon="'password'" :placeholder="'Informe sua senha'"/>
+    <button
+      type="submit"
+      class="
+        bg-blue-600
+        w-full
+        rounded-md
+        p-4
+        font-medium
+        text-lg
+        hover:opacity-90
+        flex justify-center item-center
+      "
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 mr-1"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+        />
+      </svg>
+      ENTRAR
+    </button>
 
-  <button type="submit" class="bg-blue-600 w-full rounded-md p-4 font-medium text-lg hover:opacity-90">ENTRAR</button>
+    <div class="text-gray-500 text-center mt-10">
+      <p>Desenvolvido por WRRDeveloper</p>
+      <p>&copy;{{ ano }} - Todos os Direitos Reservados</p>
 
-  <div class="text-gray-500 text-center mt-10">
-    <p>Desenvolvido por WRRDeveloper</p>
-    <p>&copy;{{ano}} - Todos os Direitos Reservados</p>
-    <p class="text-green-700 mt-4 flex justify-center items-center gap-1">
-      <img src="../assets/images/icons/whatsapp.png" class="w-4" alt="whatsapp">
-      Precisa de Suporte?</p>
+      <a
+        href="https://wa.me/+5531986783545?text=Ola! estou com problemas para logar."
+        target="_black"
+        class="text-green-700 mt-4 flex justify-center items-center gap-1"
+      >
+        <img
+          src="../assets/images/icons/whatsapp.png"
+          class="w-4"
+          alt="whatsapp"
+        />
+        Precisa de Suporte?
+      </a>
+    </div>
   </div>
-  
- 
-</div>
-
 </template>
 
 <script>
@@ -27,12 +79,10 @@ import Input from "../components/input.vue";
 export default {
   name: "Home",
   components: { Input },
-  data(){
-    return{
-      ano: (new Date().getFullYear()),
-    }
+  data() {
+    return {
+      ano: new Date().getFullYear(),
+    };
   },
-
-
 };
 </script>
