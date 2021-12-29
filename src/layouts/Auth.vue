@@ -32,6 +32,7 @@
 
 <script>
 export default {
+  components: {  },
   name: "Auth",
 };
 </script>

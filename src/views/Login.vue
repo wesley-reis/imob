@@ -1,12 +1,14 @@
 <template>
+
   <h1 class="text-5xl text-gray-400 mt-4 mb-8">Login</h1>
 
   <div class="w-5/6">
     <Input
       :label="'E-mail:'"
       :type="'email'"
-      :id="'email'"
+      :name="'email'"
       :placeholder="'Informe seu e-mail'"
+      :error="error=='email'"
     >
       <img src="../assets/images/icons/email.png" class="w-5" alt="mail" />
     </Input>
@@ -14,8 +16,9 @@
     <Input
       :label="'Senha:'"
       :type="'password'"
-      :id="'password'"
+      :name="'password'"
       :placeholder="'Informe sua senha'"
+       :error="error=='password'"
     >
       <img
         src="../assets/images/icons/password.png"
@@ -25,6 +28,7 @@
     </Input>
 
     <button
+    @click="showAlert"
       type="submit"
       class="
         bg-blue-600
@@ -75,14 +79,32 @@
 </template>
 
 <script>
-import Input from "../components/input.vue";
+import Input from '../components/Input.vue';
 export default {
   name: "Home",
-  components: { Input },
+  components: {Input},
   data() {
     return {
       ano: new Date().getFullYear(),
+      error:null,
     };
   },
+  mounted(){
+     this.error = 'password'
+  },
+  methods:{
+    showAlert(){
+      this.$swal({
+        toast: true,
+        position: 'top-end',
+        timerProgressBar:true,
+        showConfirmButton: false,
+        timer: 5000,
+        text: 'is a good day!',
+      });
+    }
+  }
+
+
 };
 </script>
