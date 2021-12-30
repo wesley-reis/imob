@@ -18,7 +18,7 @@
       :type="'password'"
       :name="'password'"
       :placeholder="'Informe sua senha'"
-       :error="error=='password'"
+      :error="error=='password'"
     >
       <img
         src="../assets/images/icons/password.png"
@@ -76,17 +76,19 @@
       </a>
     </div>
   </div>
+  
 </template>
 
 <script>
 import Input from '../components/Input.vue';
 export default {
   name: "Home",
-  components: {Input},
+  components: { Input},
   data() {
     return {
       ano: new Date().getFullYear(),
-      error:null,
+      error:'',
+      message:'',  
     };
   },
   mounted(){
@@ -94,18 +96,10 @@ export default {
   },
   methods:{
     showAlert(){
-      window.Toast.fire({text:"Dados cadastrados com sucesso", icon:"success"})
+      window.Toast.fire({text:"Ooops, Hove algun problema", icon:"info", background:'#E3E7F2'})
     }
   }
 
 
 };
 </script>
-<style>
-  .swal2-toast{
-    width: 100%;
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-  }
-</style>
