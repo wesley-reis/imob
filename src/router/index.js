@@ -1,16 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LayoutTheme from "../layouts/Theme.vue";
+import LayoutDefault from "../layouts/Default.vue";
 import LayoutAuth from "../layouts/Auth.vue";
 import Home from "../views/Home.vue";
+import Contact from "../views/Contact.vue";
 import Login from "../views/Login.vue";
 
 const routes = [
   {
     path: "/",
-    component: LayoutTheme,
-
-    children: [{ path: "", name: "index", component: Home }],
-  },
+    component: LayoutDefault,
+    children: [
+      { path: "", name: "index", component: Home },
+      { path: "/contato", name: "contact", component: Contact }
+  
+  ],
+   },
 
   {
     path: "/admin",
