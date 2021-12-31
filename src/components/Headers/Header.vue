@@ -72,7 +72,7 @@
       contato@minhaimob.com.br
     </p>
   </div>
-  <div class="pt-8 px-24 flex justify-between items-center shadow-md">
+  <div class="pt-8 px-24 flex justify-between items-center shadow-md overflow-hidden">
       <img src="../../assets/images/logo.png" alt="imobiliaria" class="w-1/4">
       <div class="flex justify-end items-center gap-6 py-8 text-base font-extralight">
           <a class="text-blue-600" href="">Home</a>
@@ -95,7 +95,7 @@ export default {
         background: #16163F;
     }
 
-        .bg-blue-950{
-        background: #1d1d57;
+        .bg-blue-base{
+        background: #003B6A;
     }
 </style>
