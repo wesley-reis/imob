@@ -1,9 +1,9 @@
 <template>
 
-    <article class="bg-gray-800 py-12 flex flex-col justify-center">
+    <article class="bg-gray-800 py-12 px-5 flex flex-col justify-center">
 
       <div class="flex flex-col items-center mx-auto max-w-xl">
-        <h1 class="text-3xl text-gray-200 font-medium pb-5">
+        <h1 class="text-3xl text-gray-200 font-medium pb-5 text-center">
           Quer ficar por dentro da novidades?
         </h1>
 
@@ -43,9 +43,9 @@
     class="main_footer bg-blue-50 font-normal"
   >
     <div class="pt-5 pb-28">
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-5 mx-32">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-5 mx-5 md:mx-32">
 
-        <div class="col-span-1">
+        <div class="col-span-1 ">
           <h1 class="pb-2 text-2xl text-gray-600 font-normal">Navegue <span class="text-blue-600">Aqui!</span></h1>
           <ul class="border-t-2 -mt-1">
             <li><a href="">Home</a></li>

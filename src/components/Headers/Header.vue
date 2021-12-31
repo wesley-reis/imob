@@ -14,7 +14,7 @@
       text-gray-200
     "
   >
-    <p class="flex justify-start items-center">
+    <p class="hidden lg:flex justify-center items-center mx-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 mr-3"
@@ -29,7 +29,7 @@
       </svg>
       Avenida João Daher, 0 - Centro, Lagoa Santa/MG
     </p>
-    <p class="flex justify-start items-center">
+    <p class="hidden lg:flex justify-center items-center mx-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 mr-3"
@@ -44,7 +44,7 @@
       </svg>
       Seg/Sex: 09:00h - 18:00h Sáb/Dom: Plantão
     </p>
-    <p class="flex justify-start items-center">
+    <p class="hidden lg:flex justify-center items-center mx-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 mr-3"
@@ -57,7 +57,7 @@
       </svg>
       +55 (31) 3465-1234
     </p>
-    <p class="flex justify-start items-center">
+    <p class="flex justify-center items-center mx-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 mr-3"
