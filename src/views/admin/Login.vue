@@ -10,7 +10,7 @@
       :placeholder="'Informe seu e-mail'"
       :error="error=='email'"
     >
-      <img src="../assets/images/icons/email.png" class="w-5" alt="mail" />
+      <img src="../../assets/images/icons/email.png" class="w-5" alt="mail" />
     </Input>
 
     <Input
@@ -21,7 +21,7 @@
       :error="error=='password'"
     >
       <img
-        src="../assets/images/icons/password.png"
+        src="../../assets/images/icons/password.png"
         class="w-4"
         alt="password"
       />
@@ -68,7 +68,7 @@
         class="text-emerald-700 mt-4 flex justify-center items-center gap-1"
       >
         <img
-          src="../assets/images/icons/whatsapp.png"
+          src="../../assets/images/icons/whatsapp.png"
           class="w-4"
           alt="whatsapp"
         />
@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import Input from '../components/Input.vue';
+import Input from '../../components/Input.vue';
 export default {
   name: "Home",
   components: { Input},

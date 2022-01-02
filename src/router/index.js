@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LayoutDefault from "../layouts/Default.vue";
 import LayoutAuth from "../layouts/Auth.vue";
-import Home from "../views/Home.vue";
-import Contact from "../views/Contact.vue";
-import Login from "../views/Login.vue";
+import Home from "../views/web/Home.vue";
+import Contact from "../views/web/Contact.vue";
+import Login from "../views/admin/Login.vue";
 
 const routes = [
   {
