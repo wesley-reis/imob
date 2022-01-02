@@ -79,7 +79,7 @@
     <div class="relative flex items-center justify-between h-16">
       <img src="../../assets/images/logo.png" alt="imobiliaria" class="w-2/6 md:w-1/5">
 
-      <div @click="showMenu = !showMenu" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+      <div @click="showMenu = !showMenu" class="absolute inset-y-0 right-0 flex items-center md:hidden">
         <!-- Mobile menu button-->
         <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
         
@@ -93,10 +93,10 @@
         </button>
       </div>
 
-      <div class="flex-1 flex items-center justify-end sm:items-stretch">
+      <div class="flex-1 flex items-center justify-end md:items-stretch">
 
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-4 text-base font-extralight">
+        <div class="hidden md:block md:ml-6">
+          <div class="flex space-x-4 text-base font-normal">
             <a href="#" class="text-blue-600 px-3 py-2 rounded-md" aria-current="page">Home</a>
 
             <a href="#" class="hover:text-blue-600 px-3 py-2 rounded-md">Destaque</a>
@@ -115,8 +115,8 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div :class="showMenu ? 'flex' : 'hidden'" class="sm:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 text-base font-extralight">
+  <div :class="showMenu ? 'flex' : 'hidden'" class="md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 text-base font-normal">
       <a href="#" class="text-blue-600 block px-3 py-2 rounded-md" aria-current="page">Home</a>
 
       <a href="#" class="hover:text-blue-600 block px-3 py-2 rounded-md">Destaque</a>

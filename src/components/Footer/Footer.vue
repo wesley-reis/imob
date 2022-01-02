@@ -27,12 +27,13 @@
         <button
           type="submit"
           class="
-            bg-blue-600
+            bg-sky-700
             w-full
             rounded-md
             p-3
-            font-extralight
-            text-sm text-white
+            font-normal
+            text-sm 
+            text-white
             hover:opacity-90
             flex
             justify-center

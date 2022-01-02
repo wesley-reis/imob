@@ -1,4 +1,4 @@
-# imob
+# app_vue3_tailwind
 
 ## Project setup
 ```

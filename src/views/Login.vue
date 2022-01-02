@@ -65,7 +65,7 @@
       <a
         href="https://wa.me/+5531986783545?text=Ola! estou com problemas para logar."
         target="_black"
-        class="text-green-700 mt-4 flex justify-center items-center gap-1"
+        class="text-emerald-700 mt-4 flex justify-center items-center gap-1"
       >
         <img
           src="../assets/images/icons/whatsapp.png"

@@ -20,7 +20,7 @@ const routes = [
     path: "/admin",
     component: LayoutAuth,
 
-    children: [{ path: "login", name: "login", component: Login }],
+    children: [{ path: "", name: "login", component: Login }],
   },
 ];
 
