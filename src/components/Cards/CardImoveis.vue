@@ -1,25 +1,35 @@
 <template>
   <div class="flex flex-wrap -mx-4">
-    <div class="w-full p-4">
+    <div class="w-full p-4 flex">
       <div
-        class="c-card block bg-white border border-gray-200 shadow-md hover:shadow-xl rounded overflow-hidden"
+        class="
+          c-card
+          block
+          bg-white
+          border border-gray-200
+          shadow-md
+          hover:shadow-xl
+          rounded
+          overflow-hidden
+          flex-1
+        "
       >
         <div class="relative pb-48 overflow-hidden">
           <img
             class="absolute inset-0 h-full w-full object-cover"
-            src="../../assets/properties/1/5a3571ab-4d76-466f-8246-eff8cb98cedd.jpg"
-            alt=""
+            src="@/assets/properties/1/casa1.jpg"
+            :alt="title"
           />
         </div>
         <div class="p-4">
           <h2 class="mt-2 mb-2 font-semibold text-2xl text-sky-700">
-            Linda Casa no Joa com vista para o Lagoa
+            {{ title }}
           </h2>
           <p class="text-base font-semibold text-gray-600">
-            Imóvel Residencial
+            {{ tipo }}
           </p>
           <p class="text-sm text-gray-600 flex justify-start items-center">
-            Casa - Campeche
+            {{ local }}
             <svg
               class="h-4 w-4 ml-1"
               baseProfile="tiny"
@@ -40,18 +50,64 @@
             </svg>
           </p>
           <div class="mt-5 text-sky-600 text-2xl font-bold">
-            <p>R$ 1.500,00/mês</p>
+            <p>R$ {{ price }}/mês</p>
           </div>
         </div>
 
         <div class="flex justify-center items-center">
-         <a href="#" class="w-11/12 p-2 bg-sky-700 text-white rounded-md mt-4 text-center hover:bg-sky-800">Ver Imóvel</a>
+          <a
+            :href="url"
+            class="
+              w-11/12
+              p-2
+              bg-sky-700
+              text-white
+              rounded-md
+              mt-4
+              text-center
+              hover:bg-sky-800
+            "
+            >Ver Imóvel</a
+          >
         </div>
 
-        <div class="p-4 border-t border-b mt-4 bg-gray-50">
-          
+        <div
+          class="
+            flex
+            justify-center
+            items-center
+            gap-16
+            p-4
+            border-t border-b
+            mt-4
+            bg-gray-50
+          "
+        >
+          <p class="flex flex-col justify-center items-center">
+            <img
+              src="../../assets/images/icons/bed.png"
+              class="w-9"
+              alt="quartos"
+            />
+            {{ quartos }}
+          </p>
+          <p class="flex flex-col justify-center items-center">
+            <img
+              src="../../assets/images/icons/garage.png"
+              class="w-9"
+              alt="garagem"
+            />
+            {{ garagem }}
+          </p>
+          <p class="flex flex-col justify-center items-center">
+            <img
+              src="../../assets/images/icons/util-area.png"
+              class="w-9"
+              alt="area-util"
+            />
+            {{ area }} m²
+          </p>
         </div>
-
       </div>
     </div>
   </div>
@@ -60,6 +116,16 @@
 <script>
 export default {
   name: "CardImoveis",
+  props: {
+    title: String,
+    tipo: String,
+    local: String,
+    price: String,
+    url: String,
+    quartos: String,
+    garagem: String,
+    area: String,
+  },
 };
 </script>
 

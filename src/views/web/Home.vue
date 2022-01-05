@@ -7,34 +7,173 @@
   <!-- Cards -->
   <div class="bg-gray-100 w-full">
     <div class="container mx-auto py-16 px-5 sm:px-14 md:px-20">
-      <div class="flex flex-col items-center text-center w-full border-b border-sky-800 gap-3">
-        <h2 class="text-4xl text-black font-semibold">Ambiente no seu <b class="text-sky-700 font-bold">estilo</b></h2>
-        <p class="text-xl text-gray-500 font-medium mb-6">Encontre o imóvel com a expereiência que você quer vicer</p>
+      <div
+        class="
+          flex flex-col
+          items-center
+          text-center
+          w-full
+          border-b border-sky-800
+          gap-3
+        "
+      >
+        <h2 class="text-4xl text-black font-semibold">
+          Ambiente no seu <b class="text-sky-700 font-bold">estilo</b>
+        </h2>
+        <p class="text-xl text-gray-500 font-medium mb-6">
+          Encontre o imóvel com a expereiência que você quer vicer
+        </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mx-auto">
-        <CardAmbiente cardTitle="Cobertura" cardImage="cobertura"/>
-        <CardAmbiente cardTitle="Alto Padrão" cardImage="alto-padrao"/>
-        <CardAmbiente cardTitle="De frente para Lagoa" cardImage="lagoa"/>
-        <CardAmbiente cardTitle="Condomínio Fechado" cardImage="condominio"/>
-        <CardAmbiente cardTitle="Compacto" cardImage="compacto"/>
-        <CardAmbiente cardTitle="Lojas e Salas" cardImage="lojas-salas"/>
+      <div
+        class="
+          grid grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-5
+          mt-10
+          mx-auto
+        "
+      >
+        <CardAmbiente cardTitle="Cobertura" cardImage="cobertura" />
+        <CardAmbiente cardTitle="Alto Padrão" cardImage="alto-padrao" />
+        <CardAmbiente cardTitle="De frente para Lagoa" cardImage="lagoa" />
+        <CardAmbiente cardTitle="Condomínio Fechado" cardImage="condominio" />
+        <CardAmbiente cardTitle="Compacto" cardImage="compacto" />
+        <CardAmbiente cardTitle="Lojas e Salas" cardImage="lojas-salas" />
       </div>
     </div>
   </div>
   <!-- End Cards -->
 
-<!-- Card Imoveis À Venda -->
+  <!-- Card Imoveis À Venda -->
   <div class="bg-white w-full">
     <div class="container mx-auto py-16 px-5 sm:px-14 md:px-20">
-      <div class="flex justify-between items-center w-full border-b border-sky-800">
+      <div
+        class="flex justify-between items-center w-full border-b border-sky-800"
+      >
         <h2 class="mb-2 text-4xl text-sky-700 font-semibold">À Venda</h2>
-        <p class="text-md text-sky-700 font-normal hover:underline cursor-pointer">Ver mais...</p>
+        <a
+          href="#"
+          class="
+            text-md text-sky-700
+            font-normal
+            hover:underline
+            cursor-pointer
+          "
+        >
+          Ver mais...
+        </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mx-auto">
-        <CardImoveis />
-        <CardImoveis />
-        <CardImoveis />
+      <div
+        class="
+          grid grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-7
+          mt-10
+          mx-auto
+        "
+      >
+        <CardImoveis
+          title="Linda Casa no Jardim Imperial"
+          tipo="imóvel Residencial"
+          local="Casa - Jardim Imperial"
+          price="1.000,00"
+          url="linda-casa-no-jardim-imperial"
+          quartos="2"
+          garagem="2"
+          area="1000"
+        />
+        <CardImoveis
+          title="Linda Casa no Joa com vista para o Lagoa"
+          tipo="imóvel Residencial"
+          local="Casa - Joa"
+          price="1.500,00"
+          url="linda-casa-no-joa"
+          quartos="4"
+          garagem="2"
+          area="1500"
+        />
+
+        <CardImoveis
+          title="Casa dois andares na Varzea"
+          tipo="imóvel Residencial"
+          local="Casa - Varzea"
+          price="780,00"
+          url="linda-casa-na-varzea"
+          quartos="2"
+          garagem="1"
+          area="800"
+        >
+        </CardImoveis>
+      </div>
+    </div>
+  </div>
+  <!-- End Card -->
+
+    <!-- Card Imoveis Alugar -->
+  <div class="bg-gray-100 w-full">
+    <div class="container mx-auto py-16 px-5 sm:px-14 md:px-20">
+      <div
+        class="flex justify-between items-center w-full border-b border-sky-800"
+      >
+        <h2 class="mb-2 text-4xl text-sky-700 font-semibold">Para Alugar</h2>
+        <a
+          href="#"
+          class="
+            text-md text-sky-700
+            font-normal
+            hover:underline
+            cursor-pointer
+          "
+        >
+          Ver mais...
+        </a>
+      </div>
+
+      <div
+        class="
+          grid grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-7
+          mt-10
+          mx-auto
+        "
+      >
+        <CardImoveis
+          title="Linda Casa no Jardim Imperial"
+          tipo="imóvel Residencial"
+          local="Casa - Jardim Imperial"
+          price="1.000,00"
+          url="linda-casa-no-jardim-imperial"
+          quartos="2"
+          garagem="2"
+          area="1000"
+        />
+        <CardImoveis
+          title="Linda Casa no Joa com vista para o Lagoa"
+          tipo="imóvel Residencial"
+          local="Casa - Joa"
+          price="1.500,00"
+          url="linda-casa-no-joa"
+          quartos="4"
+          garagem="2"
+          area="1500"
+        />
+
+        <CardImoveis
+          title="Casa dois andares na Varzea"
+          tipo="imóvel Residencial"
+          local="Casa - Varzea"
+          price="780,00"
+          url="linda-casa-na-varzea"
+          quartos="2"
+          garagem="1"
+          area="800"
+        >
+        </CardImoveis>
       </div>
     </div>
   </div>
@@ -55,14 +194,10 @@ export default {
     CardAmbiente,
   },
   data() {
-    return {
-
-    };
+    return {};
   },
   mounted() {},
   methods: {},
 };
 </script>
-<style>
-</style>
-
+<style></style>
