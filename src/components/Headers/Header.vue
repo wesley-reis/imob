@@ -75,80 +75,163 @@
   </div>
 
   <nav class="bg-white pt-10">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-between h-16">
-      <img src="../../assets/images/logo.png" alt="imobiliaria" class="w-2/6 md:w-1/5">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <img
+          src="../../assets/images/logo.png"
+          alt="imobiliaria"
+          class="w-2/6 md:w-1/5"
+        />
 
-      <div @click="showMenu = !showMenu" class="absolute inset-y-0 right-0 flex items-center md:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-        
-          <svg v-if="!showMenu" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-         
-          <svg v-if="showMenu" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+        <div
+          @click="showMenu = !showMenu"
+          class="absolute inset-y-0 right-0 flex items-center md:hidden"
+        >
+          <!-- Mobile menu button-->
+          <button
+            type="button"
+            class="
+              inline-flex
+              items-center
+              justify-center
+              p-2
+              rounded-md
+              text-blue-900
+              focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+            "
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg
+              v-if="!showMenu"
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
 
-      <div class="flex-1 flex items-center justify-end md:items-stretch">
+            <svg
+              v-if="showMenu"
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
 
-        <div class="hidden md:block md:ml-6">
-          <div class="flex space-x-4 text-base font-normal">
-            <a href="#" class="text-blue-600 px-3 py-2 rounded-md" aria-current="page">Home</a>
-
-            <a href="#" class="hover:text-blue-600 px-3 py-2 rounded-md">Destaque</a>
-
-            <a href="#" class="hover:text-blue-600 px-3 py-2 rounded-md">Alugar</a>
-
-            <a href="#" class="hover:text-blue-600 px-3 py-2 rounded-md">Comprar</a>
-            
-            <a href="#" class="hover:text-blue-600 px-3 py-2 rounded-md">Contato</a>
-
+        <div class="flex-1 flex items-center justify-end md:items-stretch">
+          <div class="hidden md:block md:ml-6">
+            <div id="nav" class="flex space-x-4 text-base font-normal">
+              <router-link
+                class="hover:text-blue-600 px-3 py-2"
+                :to="{ name: 'index' }"
+                >Home</router-link
+              >
+              <router-link
+                class="hover:text-blue-600 px-3 py-2"
+                :to="{ name: 'propertie', params: { name: 'imovel-no-joa' } }"
+                >Destaque</router-link
+              >
+              <router-link
+                class="hover:text-blue-600 px-3 py-2"
+                :to="{ name: 'rent' }"
+                >Alugar</router-link
+              >
+              <router-link
+                class="hover:text-blue-600 px-3 py-2"
+                :to="{ name: 'sale' }"
+                >Comprar</router-link
+              >
+              <router-link
+                class="hover:text-blue-600 px-3 py-2"
+                :to="{ name: 'contact' }"
+                >Contato</router-link
+              >
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div :class="showMenu ? 'flex' : 'hidden'" class="md:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 text-base font-normal">
-      <a href="#" class="text-blue-600 block px-3 py-2 rounded-md" aria-current="page">Home</a>
-
-      <a href="#" class="hover:text-blue-600 block px-3 py-2 rounded-md">Destaque</a>
-
-      <a href="#" class="hover:text-blue-600 block px-3 py-2 rounded-md">Alugar</a>
-
-      <a href="#" class="hover:text-blue-600 block px-3 py-2 rounded-md">Comprar</a>
-
-      <a href="#" class="hover:text-blue-600 block px-3 py-2 rounded-md">Contato</a>
-
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div
+      :class="showMenu ? 'flex' : 'hidden'"
+      class="md:hidden"
+      id="mobile-menu"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1 text-base font-normal">
+        <div id="nav" class="flex flex-col">
+          <router-link
+          class="hover:text-blue-600 px-3 py-2"
+          :to="{ name: 'index' }"
+          >Home</router-link
+        >
+        <router-link
+          class="hover:text-blue-600 px-3 py-2"
+          :to="{ name: 'propertie', params: { name: 'imovel-no-joa' } }"
+          >Destaque</router-link
+        >
+        <router-link
+          class="hover:text-blue-600 px-3 py-2"
+          :to="{ name: 'rent' }"
+          >Alugar</router-link
+        >
+        <router-link
+          class="hover:text-blue-600 px-3 py-2"
+          :to="{ name: 'sale' }"
+          >Comprar</router-link
+        >
+        <router-link
+          class="hover:text-blue-600 px-3 py-2"
+          :to="{ name: 'contact' }"
+          >Contato</router-link
+        >
+        </div>
+      </div>
     </div>
-  </div>
   </nav>
 </template>
 
 <script>
 export default {
   name: "Header",
-  data(){
-    return{
+  data() {
+    return {
       showMenu: false,
-    }
-  }
+    };
+  },
 };
 </script>
 
 <style>
-    .bg-blue-1000{
-        background: #16163F;
-    }
+.bg-blue-1000 {
+  background: #16163f;
+}
 
-        .bg-blue-base{
-        background: #003B6A;
-    }
+.bg-blue-base {
+  background: #003b6a;
+}
+
+#nav a.router-link-exact-active {
+  color: #2563ee;
+}
 </style>

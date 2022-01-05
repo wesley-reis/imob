@@ -18,7 +18,7 @@ const routes = [
     component: LayoutDefault,
     children: [
       { path: "", name: "index", component: Home },
-      { path: "/{propertie}", name: "propertie", component: Propertie },
+      { path: "/imovel/:name", name: "propertie", component: Propertie },
       { path: "/alugar", name: "rent", component: Rent },
       { path: "/comprar", name: "sale", component: Sale },
       { path: "/contato", name: "contact", component: Contact },
