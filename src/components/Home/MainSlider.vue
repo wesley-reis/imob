@@ -2,14 +2,14 @@
    <div class="main_slide hidden sm:flex justify-center items-center">
 
     <div class="flex justify-center md:container md:block md:pl-20">
-        <div class="w-9/12 md:w-6/12">
+        <div class="w-9/12 md:w-3/5">
             <p class="leading-normal p-8 tracking-widest bg-black bg-opacity-80 uppercase font-extralight text-4xl text-white">Encontre o <b>Imóvel ideal</b> para você e <b>sua família</b>
-                morar na praia!</p>
-                <div class="mt-6">
-            <a href="javascript:void(0);" class="py-3 px-4 bg-sky-600 text-white rounded-md mr-1 hover:bg-sky-900 text-lg font-normal">Quero <b>Alugar</b>!</a>
-            <a href="javascript:void(0);" class="py-3 px-4 bg-sky-600 text-white rounded-md hover:bg-sky-900 text-lg font-normal">Quero <b>Comprar</b>!</a>
-
-                </div>
+                morar na praia!
+            </p>
+            <div class="mt-6">
+                <a href="javascript:void(0);" class="py-3 px-4 bg-sky-600 text-white rounded-md mr-1 hover:bg-sky-900 text-lg font-normal">Quero <b>Alugar</b>!</a>
+                <a href="javascript:void(0);" class="py-3 px-4 bg-sky-600 text-white rounded-md hover:bg-sky-900 text-lg font-normal">Quero <b>Comprar</b>!</a>
+            </div>
         </div>
     </div>
 

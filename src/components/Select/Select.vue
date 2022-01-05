@@ -30,14 +30,14 @@
       <div v-show="isOpen" class="absolute mt-1 w-full rounded-md bg-white shadow-lg">
         <ul tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-item-3" class="max-h-56 rounded-md py-1 text-base leading-6 shadow-xs overflow-auto focus:outline-none sm:text-sm sm:leading-5">
 
-          <li tabindex="0" @click="select(item)" id="listbox-item-0" role="option" v-for="item in data" v-bind:key="item.id" class="text-gray-700 bg-white select-none relative py-2 pl-3 pr-9  cursor-pointer hover:text-white hover:bg-sky-600 focus:outline-none focus:text-white focus:bg-sky-600 z-10">
+          <li tabindex="0" @click="select(item)" id="listbox-item-0" role="option" v-for="item in data" :key="item" class="text-gray-700 bg-white select-none relative py-2 pl-3 pr-9  cursor-pointer hover:text-white hover:bg-sky-600 focus:outline-none focus:text-white focus:bg-sky-600 z-10">
             <div class="flex items-center space-x-3">
-              <span class="block truncate" v-bind:class="{ 'font-normal' : !isSelected(item.id) , 'font-semibold' : isSelected(item.id)}">
-                {{ item.name }}
+              <span class="block truncate" v-bind:class="{ 'font-normal' : !isSelected(item) , 'font-semibold' : isSelected(item)}">
+                {{ item }}
               </span>
             </div>
 
-            <span v-show="isSelected(item.id)" class="absolute inset-y-0 right-0 flex items-center pr-4 text-emerald-700">
+            <span v-show="isSelected(item)" class="absolute inset-y-0 right-0 flex items-center pr-4 text-emerald-700">
               <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
@@ -61,7 +61,6 @@ export default {
     return {
       isOpen: false,
       item:null,
-      id:null,
     }
   },
   mounted(){
@@ -69,7 +68,7 @@ export default {
   },
   methods: {
     isSelected(value) {
-     return this.id === value ;
+     return this.item === value ;
     },
     closeDropdown() {
       this.isOpen = !this.isOpen;
@@ -77,10 +76,8 @@ export default {
 
     select(value) {
       this.$emit('valueSelect', value);
-      let name = value.name;
-      let id = value.id;
-      this.item = name;
-      this.id = id;
+      let item = value;
+      this.item = item;
       this.closeDropdown();
 
     },
