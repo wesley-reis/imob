@@ -77,11 +77,13 @@
   <nav class="bg-white pt-10">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
+        <router-link :to="{name:'index'}">
         <img
           src="../../assets/images/logo.png"
           alt="imobiliaria"
           class="w-2/6 md:w-1/5"
         />
+        </router-link>
 
         <div
           @click="showMenu = !showMenu"

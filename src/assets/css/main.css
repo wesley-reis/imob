@@ -833,6 +833,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 83.333333%;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
 .max-w-xl {
   max-width: 36rem;
 }
@@ -1600,6 +1608,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:bg-sky-600:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
+}
+
+.focus\:bg-transparent:focus {
+  background-color: transparent;
 }
 
 .focus\:text-white:focus {
