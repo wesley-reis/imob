@@ -2,7 +2,6 @@
   <router-view/>
 
 </template>
-
 <style>
   .swal2-toast{
     display: flex !important;
