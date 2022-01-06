@@ -347,7 +347,7 @@ export default {
     // time para exibir
     setTimeout(() => {
       document.getElementById("whatswidget-pre-wrapper").style.display = "block"
-    }, 5000)
+    }, 9000)
 
     // Abrir chat
     var chatOpen = !1;
@@ -381,7 +381,7 @@ export default {
   position: fixed !important;
   bottom: 20px !important;
   right: 30px !important;
-  z-index: 1001 !important;
+  z-index: 20 !important;
 }
 .whatswidget-conversation {
   background-color: #e4dcd4 !important;
