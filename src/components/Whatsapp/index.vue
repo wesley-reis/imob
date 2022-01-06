@@ -1,5 +1,5 @@
 <template>
-  <div id="whatswidget-pre-wrapper" class="">
+  <div id="whatswidget-pre-wrapper">
     <div
       id="whatswidget-widget-wrapper"
       class="whatswidget-widget-wrapper"
@@ -276,14 +276,14 @@
             style="all: revert"
             id="whatswidget-phone-desktop"
             target="_blank"
-            href="https://web.whatsapp.com/send?phone=(31) 98678-3545"
+            href="https://web.whatsapp.com/send?phone=+55(31)98678-3545"
             class="whatswidget-cta whatswidget-cta-desktop"
             >Enviar Mensagem</a
           >
           <a
             id="whatswidget-phone-mobile"
             target="_blank"
-            href="https://wa.me/(31) 98678-3545"
+            href="https://wa.me/+55(31)98678-3545"
             class="whatswidget-cta whatswidget-cta-mobile"
             style="all: revert"
             >Enviar Mensagem</a
@@ -334,6 +334,7 @@
 export default {
   name: "Watssapp",
   mounted() {
+    document.getElementById("whatswidget-pre-wrapper").style.display = "none"
     document.getElementById("whatswidget-conversation").style.display = "none";
     document.getElementById("whatswidget-conversation").style.opacity = "0";
     var button = document.getElementById("whatswidget-button");
@@ -342,6 +343,13 @@ export default {
       "whatswidget-conversation-message-outer"
     );
     conversationMessageOuter.addEventListener("click", openChat);
+
+    // time para exibir
+    setTimeout(() => {
+      document.getElementById("whatswidget-pre-wrapper").style.display = "block"
+    }, 5000)
+
+    // Abrir chat
     var chatOpen = !1;
     function openChat() {
       0 == chatOpen
@@ -471,7 +479,6 @@ export default {
   border-radius: 100% !important;
   width: 50px !important;
   height: 50px !important;
-  box-shadow: 2px 1px #0d630d63 !important;
   transition: 1s !important;
 }
 .whatswidget-icon {
