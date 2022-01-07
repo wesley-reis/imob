@@ -34,12 +34,8 @@
           mx-auto
         "
       >
-        <CardAmbiente cardTitle="Cobertura" cardImage="cobertura" />
-        <CardAmbiente cardTitle="Alto Padrão" cardImage="alto-padrao" />
-        <CardAmbiente cardTitle="De frente para Lagoa" cardImage="lagoa" />
-        <CardAmbiente cardTitle="Condomínio Fechado" cardImage="condominio" />
-        <CardAmbiente cardTitle="Compacto" cardImage="compacto" />
-        <CardAmbiente cardTitle="Lojas e Salas" cardImage="lojas-salas" />
+        <CardAmbiente v-for="card in cards" :key="card.title" :card="card" />
+
       </div>
     </div>
   </div>
@@ -75,38 +71,7 @@
           mx-auto
         "
       >
-        <CardImoveis
-          title="Linda Casa no Jardim Imperial"
-          tipo="imóvel Residencial"
-          local="Casa - Jardim Imperial"
-          price="1.000,00"
-          url="linda-casa-no-jardim-imperial"
-          quartos="2"
-          garagem="2"
-          area="1000"
-        />
-        <CardImoveis
-          title="Linda Casa no Joa com vista para o Lagoa"
-          tipo="imóvel Residencial"
-          local="Casa - Joa"
-          price="1.500,00"
-          url="linda-casa-no-joa"
-          quartos="4"
-          garagem="2"
-          area="1500"
-        />
-
-        <CardImoveis
-          title="Casa dois andares na Varzea"
-          tipo="imóvel Residencial"
-          local="Casa - Varzea"
-          price="780,00"
-          url="linda-casa-na-varzea"
-          quartos="2"
-          garagem="1"
-          area="800"
-        >
-        </CardImoveis>
+        <CardImoveis v-for="property in properties" :key="property.title" :property="property" />
       </div>
     </div>
   </div>
@@ -142,38 +107,7 @@
           mx-auto
         "
       >
-        <CardImoveis
-          title="Linda Casa no Jardim Imperial"
-          tipo="imóvel Residencial"
-          local="Casa - Jardim Imperial"
-          price="1.000,00"
-          url="linda-casa-no-jardim-imperial"
-          quartos="2"
-          garagem="2"
-          area="1000"
-        />
-        <CardImoveis
-          title="Linda Casa no Joa com vista para o Lagoa"
-          tipo="imóvel Residencial"
-          local="Casa - Joa"
-          price="1.500,00"
-          url="linda-casa-no-joa"
-          quartos="4"
-          garagem="2"
-          area="1500"
-        />
-
-        <CardImoveis
-          title="Casa dois andares na Varzea"
-          tipo="imóvel Residencial"
-          local="Casa - Varzea"
-          price="780,00"
-          url="linda-casa-na-varzea"
-          quartos="2"
-          garagem="1"
-          area="800"
-        >
-        </CardImoveis>
+         <CardImoveis v-for="property in properties" :key="property.title" :property="property" />
       </div>
     </div>
   </div>
@@ -194,7 +128,26 @@ export default {
     CardAmbiente,
   },
   data() {
-    return {};
+    return {
+
+      cards:[
+        { title:"Cobertura", image:"cobertura"},
+        { title:"Alto Padrão", image:"alto-padrao"},
+        { title:"De frente para Lagoa", image:"lagoa"},
+        { title:"Condomínio Fechado", image:"condominio"},
+        { title:"Compacto", image:"compacto"},
+        { title:"Lojas e Salas", image:"lojas-salas"},
+      ],
+
+      properties:[
+        { title:"Linda Casa no Jardim Imperial", tipo:"imóvel Residencial", local:"Casa - Jardim Imperial", price:"1.000,00", url:"linda-casa-no-jardim-imperial"
+          , quartos:"2", garagem:"2", area:"1000", image:"https://images.unsplash.com/photo-1575517111478-7f6afd0973db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"},
+        { title:"Linda Casa no Joa", tipo:"imóvel Residencial", local:"Casa - Joa", price:"1.500,00", url:"linda-casa-no-joa"
+          , quartos:"2", garagem:"1", area:"1500", image:"https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"},
+        { title:"Linda Casa na Varzea", tipo:"imóvel Residencial", local:"Casa - Jardim Imperial", price:"1.900,00", url:"linda-casa-no-jardim-imperial"
+          , quartos:"4", garagem:"3", area:"2000", image:"https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"},
+      ]
+    };
   },
   mounted() {},
   methods: {},

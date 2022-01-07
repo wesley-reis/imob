@@ -17,19 +17,19 @@
         <div class="relative pb-48 overflow-hidden">
           <img
             class="absolute inset-0 h-full w-full object-cover"
-            src="@/assets/properties/1/casa1.jpg"
-            :alt="title"
+            :src="property.image"
+            :alt="property.title"
           />
         </div>
         <div class="p-4">
           <h2 class="mt-2 mb-2 font-semibold text-2xl text-sky-700">
-            {{ title }}
+            {{ property.title }}
           </h2>
           <p class="text-base font-semibold text-gray-600">
-            {{ tipo }}
+            {{ property.tipo }}
           </p>
           <p class="text-sm text-gray-600 flex justify-start items-center">
-            {{ local }}
+            {{ property.local }}
             <svg
               class="h-4 w-4 ml-1"
               baseProfile="tiny"
@@ -50,13 +50,13 @@
             </svg>
           </p>
           <div class="mt-5 text-sky-600 text-2xl font-bold">
-            <p>R$ {{ price }}/mês</p>
+            <p>R$ {{ property.price }}/mês</p>
           </div>
         </div>
 
         <div class="flex justify-center items-center">
           <a
-            :href="url"
+            :href="property.url"
             class="
               w-11/12
               p-2
@@ -89,7 +89,7 @@
               class="w-9"
               alt="quartos"
             />
-            {{ quartos }}
+            {{ property.quartos }}
           </p>
           <p class="flex flex-col justify-center items-center">
             <img
@@ -97,7 +97,7 @@
               class="w-9"
               alt="garagem"
             />
-            {{ garagem }}
+            {{ property.garagem }}
           </p>
           <p class="flex flex-col justify-center items-center">
             <img
@@ -105,7 +105,7 @@
               class="w-9"
               alt="area-util"
             />
-            {{ area }} m²
+            {{ property.area }} m²
           </p>
         </div>
       </div>
@@ -117,14 +117,7 @@
 export default {
   name: "CardImoveis",
   props: {
-    title: String,
-    tipo: String,
-    local: String,
-    price: String,
-    url: String,
-    quartos: String,
-    garagem: String,
-    area: String,
+    property:Object,
   },
 };
 </script>

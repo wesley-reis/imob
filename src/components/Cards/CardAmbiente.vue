@@ -4,10 +4,10 @@
       <div
       
         class="text flex justify-center items-center w-full py-24"
-        :class="image"
+        :class="card.image"
       >
         <p class="absolute text-gray-100 text-2xl font-semibold text-center">
-          {{ title }}
+          {{ card.title }}
         </p>
       </div>
     </a>
@@ -18,19 +18,8 @@
 export default {
   name: "CardAmbiente",
   props: {
-    cardTitle: String,
-    cardImage: String,
-  },
-  data() {
-    return {
-      title: "",
-      image:"",
-    };
-  },
-  mounted() {
-    this.title = this.cardTitle;
-    this.image = this.cardImage;
-  },
+    card:Object,
+  }
 };
 </script>
 
