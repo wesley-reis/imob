@@ -5499,6 +5499,11 @@
     "json-schema" "0.4.0"
     "verror" "1.10.0"
 
+"keen-slider@^6.6.3":
+  "integrity" "sha512-IDJh3CNeiCY/0N/ht+4/TUUD0plS064ijO8AcQ2sJXS07PhJOnv7kNUVsQdNh+t8Vmmy3sJ+sHNubSGdrEcMlQ=="
+  "resolved" "https://registry.npmjs.org/keen-slider/-/keen-slider-6.6.3.tgz"
+  "version" "6.6.3"
+
 "killable@^1.0.1":
   "integrity" "sha512-LzqtLKlUwirEUyl/nicirVmNiPvYs7l5n8wOPP7fyJVpUPkvCnW/vuiXGpylGUlnPDnB7311rARzAt3Mhswpjg=="
   "resolved" "https://registry.npmjs.org/killable/-/killable-1.0.1.tgz"
