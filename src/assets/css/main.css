@@ -502,10 +502,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   pointer-events: none;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1011,6 +1007,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.75;
 }
 
+.fill-sky-600 {
+  fill: #075985;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1218,11 +1218,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .font-medium {
@@ -1443,6 +1438,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-sky-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
+}
+
+.hover\:fill-gray-100:hover {
+  fill: #f1f5f9;
 }
 
 .hover\:text-blue-600:hover {
