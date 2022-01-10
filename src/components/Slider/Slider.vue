@@ -2,10 +2,14 @@
   <div>
     <div class="navigation-wrapper">
       <div ref="container" class="keen-slider">
-        <div class="keen-slider__slide image_slide" v-for="image in propertyImages" :key="image">
+        <div
+          class="keen-slider__slide image_slide"
+          v-for="image in propertyImages"
+          :key="image"
+        >
           <img class="w-full h-full" :src="image.image" :alt="image.name" />
         </div>
-       </div>
+      </div>
       <svg
         @click="slider.prev()"
         class="fill-sky-600 cursor-pointer hover:fill-gray-100"
@@ -48,13 +52,13 @@
 </template>
 
 <script>
-  import { computed, ref } from 'vue'
-  import { useKeenSlider } from 'keen-slider/vue.es'
-  import 'keen-slider/keen-slider.min.css'
+import { computed, ref } from "vue";
+import { useKeenSlider } from "keen-slider/vue.es";
+import "keen-slider/keen-slider.min.css";
 export default {
-  name:"Slider",
-  props:{
-    propertyImages:Object,
+  name: "Slider",
+  props: {
+    propertyImages: Object,
   },
   setup() {
     const current = ref(1);
@@ -63,40 +67,40 @@ export default {
         loop: true,
         initial: current.value,
         slideChanged: (s) => {
-            current.value = s.track.details.rel;
-      },
+          current.value = s.track.details.rel;
+        },
       },
       [
         (slider) => {
-          let timeout
-          let mouseOver = false
+          let timeout;
+          let mouseOver = false;
           function clearNextTimeout() {
-            clearTimeout(timeout)
+            clearTimeout(timeout);
           }
           function nextTimeout() {
-            clearTimeout(timeout)
-            if (mouseOver) return
+            clearTimeout(timeout);
+            if (mouseOver) return;
             timeout = setTimeout(() => {
-              slider.next()
-            }, 3000)
+              slider.next();
+            }, 3000);
           }
           slider.on("created", () => {
             slider.container.addEventListener("mouseover", () => {
-              mouseOver = true
-              clearNextTimeout()
-            })
+              mouseOver = true;
+              clearNextTimeout();
+            });
             slider.container.addEventListener("mouseout", () => {
-              mouseOver = false
-              nextTimeout()
-            })
-            nextTimeout()
-          })
-          slider.on("dragStarted", clearNextTimeout)
-          slider.on("animationEnded", nextTimeout)
-          slider.on("updated", nextTimeout)
+              mouseOver = false;
+              nextTimeout();
+            });
+            nextTimeout();
+          });
+          slider.on("dragStarted", clearNextTimeout);
+          slider.on("animationEnded", nextTimeout);
+          slider.on("updated", nextTimeout);
         },
       ]
-    )
+    );
 
     const dotHelper = computed(() =>
       slider.value
@@ -111,8 +115,7 @@ export default {
 </script>
 
 <style scoped>
-
-.image_slide{
+.image_slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,11 +132,11 @@ export default {
 }
 .dot {
   border: none;
-  width: 35px;
-  height: 2px;
+  width: 25px;
+  height: 1.5px;
   background: #07598586;
-  margin: -35px 5px;
-  padding: 2px;
+  margin: -35px 3px;
+  padding: 1.5px;
   cursor: pointer;
   z-index: 20;
 }

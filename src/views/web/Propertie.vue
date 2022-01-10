@@ -2,10 +2,10 @@
   <div class="container">
     <section class="bg-gray-100 w-full">
       <div class="px-5 py-12">
-        <h1 class="text-4xl text-sky-700">
+        <h1 class="text-4xl text-sky-700 font-medium">
           Linda Casa no Joa com vista para a Lagoa Central
         </h1>
-        <p class="text-gray-600 text-sm font-medium mt-2">
+        <p class="text-gray-500 text-sm font-medium mt-2">
           Imóvel Residencial - Casa Joa
         </p>
       </div>
