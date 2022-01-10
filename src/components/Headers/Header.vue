@@ -75,14 +75,14 @@
   </div>
 
   <nav class="bg-white pt-10">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
-        <router-link :to="{name:'index'}">
-        <img
-          src="../../assets/images/logo.png"
-          alt="imobiliaria"
-          class="w-2/6 md:w-1/5"
-        />
+        <router-link :to="{ name: 'index' }">
+          <img
+            src="../../assets/images/logo.png"
+            alt="imobiliaria"
+            class="w-3/6 md:w-2/6"
+          />
         </router-link>
 
         <div
@@ -106,7 +106,7 @@
           >
             <svg
               v-if="!showMenu"
-              class="block h-6 w-6"
+              class="block h-7 w-7"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -123,7 +123,7 @@
 
             <svg
               v-if="showMenu"
-              class="block h-6 w-6"
+              class="block h-7 w-7"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -139,7 +139,7 @@
             </svg>
           </button>
         </div>
-
+        <!-- Menu Web -->
         <div class="flex-1 flex items-center justify-end md:items-stretch">
           <div class="hidden md:block md:ml-6">
             <div id="nav" class="flex space-x-4 text-base font-normal">
@@ -171,45 +171,47 @@
             </div>
           </div>
         </div>
+        <!-- End Menu Web -->
       </div>
     </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
+    <!-- Mobile menu, show/hide -->
     <div
       :class="showMenu ? 'flex' : 'hidden'"
       class="md:hidden"
       id="mobile-menu"
     >
-      <div class="px-2 pt-2 pb-3 space-y-1 text-base font-normal">
+      <div class="px-2 pt-2 pb-3 space-y-1 text-base font-normal z-10 bg-gray-50 w-full">
         <div id="nav" class="flex flex-col">
           <router-link
-          class="hover:text-blue-600 px-3 py-2"
-          :to="{ name: 'index' }"
-          >Home</router-link
-        >
-        <router-link
-          class="hover:text-blue-600 px-3 py-2"
-          :to="{ name: 'propertie', params: { name: 'imovel-no-joa' } }"
-          >Destaque</router-link
-        >
-        <router-link
-          class="hover:text-blue-600 px-3 py-2"
-          :to="{ name: 'rent' }"
-          >Alugar</router-link
-        >
-        <router-link
-          class="hover:text-blue-600 px-3 py-2"
-          :to="{ name: 'sale' }"
-          >Comprar</router-link
-        >
-        <router-link
-          class="hover:text-blue-600 px-3 py-2"
-          :to="{ name: 'contact' }"
-          >Contato</router-link
-        >
+            class="hover:text-blue-600 px-3 py-2"
+            :to="{ name: 'index' }"
+            >Home</router-link
+          >
+          <router-link
+            class="hover:text-blue-600 px-3 py-2"
+            :to="{ name: 'propertie', params: { name: 'imovel-no-joa' } }"
+            >Destaque</router-link
+          >
+          <router-link
+            class="hover:text-blue-600 px-3 py-2"
+            :to="{ name: 'rent' }"
+            >Alugar</router-link
+          >
+          <router-link
+            class="hover:text-blue-600 px-3 py-2"
+            :to="{ name: 'sale' }"
+            >Comprar</router-link
+          >
+          <router-link
+            class="hover:text-blue-600 px-3 py-2"
+            :to="{ name: 'contact' }"
+            >Contato</router-link
+          >
         </div>
       </div>
     </div>
+    <!-- End Menu Mobile -->
   </nav>
 </template>
 
@@ -235,5 +237,6 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #2563ee;
+  background: #FFFFFF;
 }
 </style>

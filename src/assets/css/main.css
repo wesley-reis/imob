@@ -697,6 +697,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.75rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .max-h-56 {
   max-height: 14rem;
 }
@@ -751,6 +755,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-32 {
   width: 8rem;
+}
+
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .max-w-xl {
@@ -890,10 +902,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1021,6 +1029,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
@@ -1031,6 +1044,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .fill-sky-600 {
   fill: #075985;
+}
+
+.fill-red-700 {
+  fill: #b91c1c;
 }
 
 .object-cover {
@@ -1633,6 +1650,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-3\/5 {
     width: 60%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:w-2\/6 {
+    width: 33.333333%;
   }
 
   .md\:grid-cols-5 {
