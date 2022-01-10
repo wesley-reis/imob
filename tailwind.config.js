@@ -7,6 +7,7 @@ module.exports = {
       'white': '#FFFFFF',
       'black': '#000000',
       'sky':{
+        500:'#0ea5e9',
         600:'#075985',
         700: '#0369a1',
         800: '#075985',
@@ -15,6 +16,10 @@ module.exports = {
       'teal':{
         400:'#2dd4bf',
         500:'#14b8a6',
+      },
+      'green':{
+        400:'#4ade80',
+        500:'#22c55e',
       },
       'blue':{
         200:'#bfdbfe',
