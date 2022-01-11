@@ -1,5 +1,6 @@
 <template>
-  <div class="container mx-auto py-12 px-5 sm:px-14 md:px-20">
+<div class="bg-gray-100 w-full">
+    <div class="container mx-auto py-12 px-5 sm:px-14 md:px-20">
     <div
       class="
         flex flex-col
@@ -21,7 +22,7 @@
       </p>
     </div>
 
-    <div class="w-full lg:w-4/6 xl:w-3/6 px-6 py-7 bg-gray-200 mt-10 mx-auto">
+    <div class="w-full lg:w-4/6 xl:w-3/6 px-6 py-7 bg-white mt-10 mx-auto">
       <p
         class="
           text-gray-500 text-lg
@@ -150,7 +151,7 @@
         <p class="font-light text-sm mt-2">
           Estamos disponíveis nos números abaixo no horário comercial.
         </p>
-        <span class="text-sm text-sky-700 mt-5">+55 (31) 5454-2222</span>
+        <a href="tel:31986783545" class="text-sm text-sky-700 mt-5">+55 (31) 5454-2222</a>
       </div>
 
       <div class="flex flex-col justify-center items-center text-center mt-5">
@@ -210,6 +211,8 @@
       </div>
     </div>
   </div>
+</div>
+
 </template>
 
 <script>

@@ -7,7 +7,7 @@
           v-for="image in propertyImages"
           :key="image"
         >
-          <img class="w-full h-full" :src="image.image" :alt="image.name" />
+          <img class="w-full" :src="image.image" :alt="image.name" />
         </div>
       </div>
       <svg
@@ -119,7 +119,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  
 }
 
 .navigation-wrapper {

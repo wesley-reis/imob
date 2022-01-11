@@ -1,8 +1,8 @@
 <template>
 <div>
-  <div v-if="label" class="flex justify-start items-center gap-1">
+  <div v-if="label"  class="flex justify-start items-center gap-1">
     <slot/>
-    <label class="text-base font-medium text-gray-300" :for="name">{{label}}</label>
+    <label class="text-base font-medium text-current mb-1" :for="name">{{label}}</label>
   </div>
   <div class="bg-gray-50 rounded-md border-b border-gray-300 w-full overflow-hidden">
     <input :placeholder="placeholder" :type="type"  :name="name" :id="name" class="w-full py-2 px-3 bg-transparent outline-none text-gray-800"/>

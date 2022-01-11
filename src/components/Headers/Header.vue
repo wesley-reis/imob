@@ -9,7 +9,7 @@
       justify-between
       items-center
       py-2
-      px-32
+      lg:px-32
       text-xs
       font-light
       text-gray-200
@@ -81,7 +81,7 @@
           <img
             src="../../assets/images/logo.png"
             alt="imobiliaria"
-            class="w-3/6 md:w-2/6"
+            class="w-3/6 md:w-2/5"
           />
         </router-link>
 
@@ -144,6 +144,7 @@
           <div class="hidden md:block md:ml-6">
             <div id="nav" class="flex space-x-4 text-base font-normal">
               <router-link
+              @click="close"
                 class="hover:text-blue-600 px-3 py-2"
                 :to="{ name: 'index' }"
                 >Home</router-link
@@ -183,27 +184,31 @@
     >
       <div class="px-2 pt-2 pb-3 space-y-1 text-base font-normal z-10 bg-gray-50 w-full">
         <div id="nav" class="flex flex-col">
-          <router-link
+          <router-link @click="close"
             class="hover:text-blue-600 px-3 py-2"
             :to="{ name: 'index' }"
             >Home</router-link
           >
           <router-link
+          @click="close"
             class="hover:text-blue-600 px-3 py-2"
             :to="{ name: 'propertie', params: { name: 'imovel-no-joa' } }"
             >Destaque</router-link
           >
           <router-link
+          @click="close"
             class="hover:text-blue-600 px-3 py-2"
             :to="{ name: 'rent' }"
             >Alugar</router-link
           >
           <router-link
+          @click="close"
             class="hover:text-blue-600 px-3 py-2"
             :to="{ name: 'sale' }"
             >Comprar</router-link
           >
           <router-link
+          @click="close"
             class="hover:text-blue-600 px-3 py-2"
             :to="{ name: 'contact' }"
             >Contato</router-link
@@ -223,6 +228,11 @@ export default {
       showMenu: false,
     };
   },
+  methods: {
+    close(){
+      this.showMenu = !this.showMenu;
+    }
+  }
 };
 </script>
 

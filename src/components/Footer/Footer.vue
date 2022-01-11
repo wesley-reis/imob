@@ -1,5 +1,15 @@
 <template>
-  <article class="bg-gray-900 py-12 px-5 flex flex-col justify-center w-full overflow-hidden">
+  <article
+    class="
+      bg-gray-900
+      py-12
+      px-5
+      flex flex-col
+      justify-center
+      w-full
+      overflow-hidden
+    "
+  >
     <div class="flex flex-col items-center mx-auto max-w-xl">
       <h1 class="text-3xl text-gray-200 font-medium pb-5 text-center">
         Quer ficar por dentro da novidades?
@@ -32,8 +42,7 @@
             rounded-md
             p-3
             font-normal
-            text-sm 
-            text-white
+            text-sm text-white
             hover:opacity-90
             flex
             justify-center
@@ -71,41 +80,68 @@
             sonhos nos bairros do Sul da Ilha da Magia, em Florianópolis.
           </p>
 
-          <h1 class="pt-5 pb-2 text-2xl text-gray-600 font-normal">Quer 
-            <span class="text-blue-600">Investir?</span></h1>
+          <h1 class="pt-5 pb-2 text-2xl text-gray-600 font-normal">
+            Quer <span class="text-blue-600">Investir?</span>
+          </h1>
           <p class="border-t-2 -mt-1">
             Entre em contato com a nossa equipe e vamos lhe informar sempre
             sobre os melhores negócios.
           </p>
         </div>
 
-        <div class="col-span-1 flex justify-center md:justify-start items-start gap-2">
-          <button class="p-3 bg-blue-base rounded-md">
-            <img src="../../assets/images/icons/facebook.png" class="w-6" alt="facebook">
-
-          </button>
-
-          <button class="p-3 bg-blue-base rounded-md">
-             <img src="../../assets/images/icons/twitter.png" class="w-6" alt="twitter">
-          </button>
-
-          <button class="p-3 bg-blue-base rounded-md">
-            <img src="../../assets/images/icons/instagram.png" class="w-6" alt="instagram">
-          </button>
+        <div
+          class="
+            col-span-1
+            flex
+            justify-center
+            md:justify-start
+            items-start
+            gap-2
+          "
+        >
+          <a
+            class="bg-sky-900 p-2 rounded-md opacity-90 hover:opacity-100"
+            href=""
+            ><img
+              src="../../assets/images/icons/facebook.png"
+              class="w-6"
+              alt="facebook"
+          /></a>
+          <a
+            class="bg-sky-900 p-2 rounded-md opacity-90 hover:opacity-100"
+            href=""
+            ><img
+              src="../../assets/images/icons/twitter.png"
+              class="w-6"
+              alt="twitter"
+          /></a>
+          <a
+            class="bg-sky-900 p-2 rounded-md opacity-90 hover:opacity-100"
+            href=""
+            ><img
+              src="../../assets/images/icons/instagram.png"
+              class="w-6"
+              alt="instagram"
+          /></a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="py-4 px-6 bg-blue-base text-white text-center text-xs font-extralight">
+  <div
+    class="
+      py-4
+      px-6
+      bg-blue-base
+      text-white text-center text-xs
+      font-extralight
+    "
+  >
     <div class="col-12">
       <p class="mb-0">
-        Imobiliária | CRECI 1234 | Avenida João Daher, 0 - Centro Lagoa
-        Santa/MG
+        Imobiliária | CRECI 1234 | Avenida João Daher, 0 - Centro Lagoa Santa/MG
       </p>
-      <p class="mb-0 pt-1">
-        Todos os Direitos Reservados - WRRDevelopment ®
-      </p>
+      <p class="mb-0 pt-1">Todos os Direitos Reservados - WRRDevelopment ®</p>
     </div>
   </div>
 </template>
