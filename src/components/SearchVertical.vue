@@ -53,7 +53,6 @@
           text-sky-700 text-sm
           font-normal
           rounded
-          transition
           hover:underline
         "
         @click.prevent="active = !active"
@@ -129,6 +128,8 @@
         items-center
         gap-4
         w-full
+        transition
+        duration-700 ease-in
       "
       v-show="active"
     >
