@@ -55,7 +55,11 @@ module.exports = {
       }
  
     },
-    extend: {},
+    extend: {
+      fontFamily:{
+        'OpenSans':['Open Sans', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }

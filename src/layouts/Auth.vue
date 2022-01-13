@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between bg-gray-900 text-white items-center h-screen overflow-hidden">
+  <div class="flex justify-between bg-gray-900 text-white items-center h-screen overflow-hidden font-OpenSans">
     <div
       class="
         flex
@@ -10,7 +10,7 @@
         lg:mt-0 lg:w-2/5
       "
     >
-      <img src="../assets/images/favicon.png" class="w-16" alt="Imob Reis" />
+      <img src="../assets/images/favicon.png" class="w-12" alt="Imob Reis" />
      
       <router-view />
 
