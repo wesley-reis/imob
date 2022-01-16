@@ -3,21 +3,20 @@
 
   <div class="grid grid-cols-12">
       <!-- Menu Lateral Web -->
-    <div class="hidden md:grid md:relative md:col-span-2 bg-sky-900 h-screen overflow-hidden text-gray-300 text-sm">
-            Menu Web sendo mostrado
-
+    <div class="hidden md:grid md:relative md:col-span-2 bg-gray-900 h-screen overflow-hidden text-gray-300 text-sm">
+      <Menu/>
     </div>
 
     <!-- Menu Mobile -->
     <div v-if="isClose" @click="isClose = !isClose" class="w-full h-screen bg-black bg-opacity-25 z-10 absolute overflow-hidden text-gray-300 text-sm">
         <div class="w-1/2 bg-sky-900 h-screen z-20">
-            Menu Mobile sendo mostrado
+            <Menu/>
         </div>
     </div>
     <!-- Menu Top -->
     <div class="col-span-12 md:col-span-10">
       <div
-        class="bg-white shadow-md flex justify-start gap-6 md:justify-between items-center px-7 py-4"
+        class="bg-white shadow-md flex justify-start gap-6 md:justify-between items-center px-7 py-3"
       >
         <button @click="isClose = !isClose" class="md:hidden bg-sky-700 hover:opacity-90 px-2 py-1 text-gray-50 rounded-sm">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -69,7 +68,9 @@
 </template>
 
 <script>
+import Menu from './Menu.vue';
 export default {
+  components: { Menu },
     name:"Header",
     data() {
         return{
