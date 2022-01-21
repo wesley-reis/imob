@@ -550,6 +550,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 1.25rem;
 }
 
+.-left-1\/2 {
+  left: -50%;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.-left-3\/4 {
+  left: -75%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -827,6 +839,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-8 {
   width: 2rem;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .max-w-xl {
@@ -1615,6 +1635,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .delay-75 {
   transition-delay: 75ms;
 }
@@ -1819,6 +1845,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:relative {
     position: relative;
+  }
+
+  .md\:left-0 {
+    left: 0px;
   }
 
   .md\:col-span-2 {

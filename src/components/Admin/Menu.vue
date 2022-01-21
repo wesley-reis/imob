@@ -252,7 +252,7 @@
       </li>
 
       <!-- Sair -->
-      <li class="item">
+      <li class="item md:hidden">
         <router-link
           class="
             btn
@@ -263,7 +263,7 @@
             justify-start
             items-center
             text-red-600
-            md:hidden
+        
           "
           to=""
         >

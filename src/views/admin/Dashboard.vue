@@ -1,6 +1,6 @@
 <template>
   <div class="">
-     <div>
+     <div class="">
        <h2>Dashboard</h2>
        <div>
          <div>clientes</div>

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Header from "../components/Dash/Header.vue";
+import Header from "../components/Admin/Header.vue";
 export default {
     name: "Admin",
     components: { Header }

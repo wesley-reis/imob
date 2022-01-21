@@ -3,7 +3,7 @@
 
   <div class="grid grid-cols-12">
       <!-- Menu Lateral Web/Mobile -->
-    <div id="menu" class="hidden w-1/2 z-10 absolute md:grid md:relative md:w-full md:col-span-2 bg-gray-800 h-screen overflow-hidden text-gray-300 text-sm">
+    <div id="menu" class="efect-menu -left-3/4 w-3/4 z-10 absolute md:left-0 md:grid md:relative md:w-full md:col-span-2 bg-gray-800 h-screen overflow-hidden text-gray-300 text-sm">
         <p @click="close" class="absolute md:hidden right-5 top-5 text-red-600 font-semibold text-lg cursor-pointer p-2">x</p>
         <Menu/>
     </div>
@@ -75,16 +75,24 @@ export default {
     methods:{
       close(){
         var menu = document.querySelector('#menu')
-        menu.classList.add('hidden')
+        menu.classList.remove('left-0')
+        menu.classList.add('-left-3/4')
       },
 
       open(){
         var menu = document.querySelector('#menu')
-        menu.classList.remove('hidden')
+        menu.classList.remove('-left-3/4')
+        menu.classList.add('left-0')
       }
     }
 };
 </script>
 
-<style>
+<style scoped>
+@media (max-width: 767px) {
+  .efect-menu{
+  transition: .5s ease-in-out;
+}
+}
+
 </style>
