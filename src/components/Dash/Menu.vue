@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-1 mx-auto w-full h-[430px]">
+  <div class="flex flex-col gap-6">
     <!-- User -->
-    <div class="text-center mt-5 mb-5">
+    <div class="flex flex-col justify-center items-center gap-2 mt-6">
       <div
         class="
           rounded-full
@@ -11,7 +11,6 @@
           flex
           justify-center
           items-center
-          mx-auto
         "
       >
         <div
@@ -37,255 +36,254 @@
           </svg>
         </div>
       </div>
-      <div class="mt-2 text-sm font-semibold -mb-96">
-        <router-link to="">Wesley.Reis</router-link>
-      </div>
+      <router-link to="">Wesley.Reis</router-link>
     </div>
 
     <!-- Menu -->
-    <div
-      class="
-        text-gray-400 text-base
-        font-medium
-        mt-24
-        flex flex-col
-        justify-start
-      "
-    >
-      <router-link
-        class="
-          active
-          border-0
-          px-5
-          py-3
-          border-l-4 border-l-blue-600
-          text-gray-900
-          bg-gray-50
-          flex
-          justify-start
-          items-center
-        "
-        to=""
-      >
-        <svg
-          class="w-5 mr-2 fill-current"
-          id="Icons"
-          style="enable-background: new 0 0 32 32"
-          version="1.1"
-          viewBox="0 0 32 32"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
+    <div class="menu w-full h-auto overflow-hidden bg-gray-800 shadow-md">
+      <!-- dashboard -->
+      <li class="item active">
+        <router-link
+          class="
+            btn
+            flex
+            p-4
+            relative
+            border-y-[1px] border-gray-800
+            justify-start
+            items-center
+          "
+          to=""
         >
-          <path
-            d="M16,4C8.3,4,2,10.3,2,18c0,3.2,1,6.2,3,8.7C5.3,27,5.8,27.2,6.2,27c2.5-1,5-1.7,7.7-1.9l5.2-9.6c0.3-0.5,0.9-0.7,1.4-0.4  c0.5,0.3,0.7,0.9,0.4,1.4L16.2,25c3.3,0,6.5,0.7,9.6,2c0.1,0.1,0.3,0.1,0.4,0.1c0.3,0,0.6-0.1,0.8-0.4c2-2.5,3-5.5,3-8.7  C30,10.3,23.7,4,16,4z M8,19H6c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S8.6,19,8,19z M11,13c-0.2,0.2-0.5,0.3-0.7,0.3  S9.8,13.2,9.6,13l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4C11.4,12,11.4,12.7,11,13z M17,10c0,0.6-0.4,1-1,1s-1-0.4-1-1V8  c0-0.6,0.4-1,1-1s1,0.4,1,1V10z M21.7,13.3c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4  L22.4,13C22.2,13.2,21.9,13.3,21.7,13.3z M26,19h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S26.6,19,26,19z"
-          />
-        </svg>
-        Dashboard</router-link
-      >
-      <a
-        href="#"
-        class="
-          border-0
-          px-5
-          py-3
-          hover:border-l-4 hover:border-l-blue-600 hover:text-gray-100
-          flex
-          justify-start
-          items-center
-        "
-      >
-        <svg
-          class="w-6 mr-2 fill-current"
-          enable-background="new 0 0 24 24"
-          id="Layer_1"
-          version="1.0"
-          viewBox="0 0 24 24"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
-          <g>
+          <svg
+            class="w-5 mr-2 fill-current"
+            id="Icons"
+            style="enable-background: new 0 0 32 32"
+            version="1.1"
+            viewBox="0 0 32 32"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
             <path
-              d="M9,9c0-1.7,1.3-3,3-3s3,1.3,3,3c0,1.7-1.3,3-3,3S9,10.7,9,9z M12,14c-4.6,0-6,3.3-6,3.3V19h12v-1.7C18,17.3,16.6,14,12,14z   "
+              d="M16,4C8.3,4,2,10.3,2,18c0,3.2,1,6.2,3,8.7C5.3,27,5.8,27.2,6.2,27c2.5-1,5-1.7,7.7-1.9l5.2-9.6c0.3-0.5,0.9-0.7,1.4-0.4  c0.5,0.3,0.7,0.9,0.4,1.4L16.2,25c3.3,0,6.5,0.7,9.6,2c0.1,0.1,0.3,0.1,0.4,0.1c0.3,0,0.6-0.1,0.8-0.4c2-2.5,3-5.5,3-8.7  C30,10.3,23.7,4,16,4z M8,19H6c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S8.6,19,8,19z M11,13c-0.2,0.2-0.5,0.3-0.7,0.3  S9.8,13.2,9.6,13l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4C11.4,12,11.4,12.7,11,13z M17,10c0,0.6-0.4,1-1,1s-1-0.4-1-1V8  c0-0.6,0.4-1,1-1s1,0.4,1,1V10z M21.7,13.3c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4  L22.4,13C22.2,13.2,21.9,13.3,21.7,13.3z M26,19h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S26.6,19,26,19z"
             />
-          </g>
-          <g>
-            <g><circle cx="18.5" cy="8.5" r="2.5" /></g>
-            <g>
-              <path
-                d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"
-              />
-            </g>
-          </g>
-          <g>
-            <g><circle cx="18.5" cy="8.5" r="2.5" /></g>
-            <g>
-              <path
-                d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"
-              />
-            </g>
-          </g>
-          <g>
-            <g><circle cx="5.5" cy="8.5" r="2.5" /></g>
-            <g>
-              <path
-                d="M5.5,13c1.2,0,2.1,0.3,2.8,0.8c-2.3,1.1-3.2,3-3.2,3.2l0,0.1H1v-1.3C1,15.7,2.1,13,5.5,13z"
-              />
-            </g>
-          </g>
-        </svg>
-        Clientes
-      </a>
-      <router-link
-        class="
-          border-0
-          px-5
-          py-3
-          hover:border-l-4 hover:border-l-blue-600 hover:text-gray-100
-          flex
-          justify-start
-          items-center
-        "
-        to=""
-      >
-        <svg
-          class="w-6 mr-2 fill-current"
-          enable-background="new 0 0 24 24"
-          id="Layer_1"
-          version="1.0"
-          viewBox="0 0 24 24"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
+          </svg>
+          Dashboard</router-link
         >
-          <g>
-            <path
-              d="M9,9c0-1.7,1.3-3,3-3s3,1.3,3,3c0,1.7-1.3,3-3,3S9,10.7,9,9z M12,14c-4.6,0-6,3.3-6,3.3V19h12v-1.7C18,17.3,16.6,14,12,14z   "
-            />
-          </g>
-          <g>
-            <g><circle cx="18.5" cy="8.5" r="2.5" /></g>
+      </li>
+
+      <!-- Clientes -->
+      <li class="item" id="mn1">
+        <a class="btn" href="#mn1">
+          <svg
+            class="w-6 mr-2 fill-current"
+            enable-background="new 0 0 24 24"
+            id="Layer_1"
+            version="1.0"
+            viewBox="0 0 24 24"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
             <g>
               <path
-                d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"
+                d="M9,9c0-1.7,1.3-3,3-3s3,1.3,3,3c0,1.7-1.3,3-3,3S9,10.7,9,9z M12,14c-4.6,0-6,3.3-6,3.3V19h12v-1.7C18,17.3,16.6,14,12,14z   "
               />
             </g>
-          </g>
-          <g>
-            <g><circle cx="18.5" cy="8.5" r="2.5" /></g>
+            <g>
+              <g><circle cx="18.5" cy="8.5" r="2.5" /></g>
+              <g>
+                <path
+                  d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"
+                />
+              </g>
+            </g>
+            <g>
+              <g><circle cx="18.5" cy="8.5" r="2.5" /></g>
+              <g>
+                <path
+                  d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"
+                />
+              </g>
+            </g>
+            <g>
+              <g><circle cx="5.5" cy="8.5" r="2.5" /></g>
+              <g>
+                <path
+                  d="M5.5,13c1.2,0,2.1,0.3,2.8,0.8c-2.3,1.1-3.2,3-3.2,3.2l0,0.1H1v-1.3C1,15.7,2.1,13,5.5,13z"
+                />
+              </g>
+            </g>
+          </svg>
+          Clientes
+          <svg
+            class="fill-gray-600 w-3 h-3 ml-auto"
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.2509 4L17.1491 4.00685C16.783 4.05651 16.5009 4.3703 16.5009 4.75L16.5 17.442L13.2801 14.2244L13.196 14.1518C12.9023 13.9341 12.4856 13.9585 12.2194 14.2248C11.9267 14.5179 11.9269 14.9927 12.2199 15.2855L16.7237 19.7855L16.8078 19.8581C17.1015 20.0758 17.5182 20.0514 17.7843 19.7851L22.2806 15.2851L22.3531 15.2009C22.5709 14.9072 22.5465 14.4905 22.2801 14.2244L22.196 14.1518C21.9023 13.9341 21.4856 13.9585 21.2194 14.2248L18 17.446L18.0009 4.75L17.994 4.64823C17.9444 4.28215 17.6306 4 17.2509 4ZM6.21441 4.21969L1.71965 8.71474L1.64704 8.79886C1.42919 9.09248 1.45341 9.50914 1.71969 9.7754L1.80381 9.84802C2.09743 10.0659 2.51409 10.0416 2.78035 9.77537L5.997 6.55711L5.99766 19.2549L6.00451 19.3567C6.05417 19.7228 6.36797 20.0049 6.74766 20.0049L6.84943 19.9981C7.21551 19.9484 7.49766 19.6346 7.49766 19.2549L7.497 6.55911L10.7199 9.77596L10.8041 9.84849C11.0979 10.066 11.5145 10.0414 11.7805 9.77481C12.0731 9.4816 12.0726 9.00672 11.7794 8.71415L7.27451 4.21909L7.19038 4.14661C6.89676 3.9292 6.48047 3.95361 6.21441 4.21969Z"
+            />
+          </svg>
+        </a>
+
+        <div class="submenu">
+          <a href="#">Ver Todos</a>
+          <a href="#">Empresas</a>
+          <a href="#">Time</a>
+          <a href="#">Criar Novo</a>
+        </div>
+      </li>
+
+      <!-- imóveis -->
+      <li class="item" id="mn2">
+        <a class="btn" href="#mn2">
+          <svg
+            id="Layer_1"
+            class="w-5 mr-2 fill-current"
+            style="enable-background: new 0 0 64 64"
+            version="1.1"
+            viewBox="0 0 64 64"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
             <g>
               <path
-                d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"
+                d="M13.068,36.785v19.236c0,0.483,0.392,0.876,0.876,0.876h20.645V39.479h9.698v17.418h5.769c0.485,0,0.876-0.393,0.876-0.876   V36.785l-18.921-18.84L13.068,36.785z M28.464,47.594h-8.751v-8.114h8.751V47.594z"
               />
-            </g>
-          </g>
-          <g>
-            <g><circle cx="5.5" cy="8.5" r="2.5" /></g>
-            <g>
               <path
-                d="M5.5,13c1.2,0,2.1,0.3,2.8,0.8c-2.3,1.1-3.2,3-3.2,3.2l0,0.1H1v-1.3C1,15.7,2.1,13,5.5,13z"
+                d="M54.767,29.868L32.001,7.103l-10.74,10.739v-4.726c0-1.104-0.896-2-2-2s-2,0.896-2,2v8.726l-8.027,8.026   c-0.977,0.977-0.977,2.56,0,3.536c0.488,0.488,1.128,0.732,1.768,0.732s1.279-0.244,1.768-0.731l19.232-19.23l19.23,19.229   c0.977,0.977,2.559,0.977,3.535,0C55.743,32.427,55.743,30.844,54.767,29.868z"
               />
             </g>
-          </g>
-        </svg>
-        Clientes</router-link
-      >
-      <router-link
-        class="
-          border-0
-          px-5
-          py-3
-          hover:border-l-4 hover:border-l-blue-600 hover:text-gray-100
-          flex
-          justify-start
-          items-center
-        "
-        to=""
-      >
-        <svg
-          id="Layer_1"
-          class="w-5 mr-2 fill-current"
-          style="enable-background: new 0 0 64 64"
-          version="1.1"
-          viewBox="0 0 64 64"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
-          <g>
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+          </svg>
+          Imóveis
+          <svg
+            class="fill-gray-600 w-3 h-3 ml-auto"
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              d="M13.068,36.785v19.236c0,0.483,0.392,0.876,0.876,0.876h20.645V39.479h9.698v17.418h5.769c0.485,0,0.876-0.393,0.876-0.876   V36.785l-18.921-18.84L13.068,36.785z M28.464,47.594h-8.751v-8.114h8.751V47.594z"
+              d="M17.2509 4L17.1491 4.00685C16.783 4.05651 16.5009 4.3703 16.5009 4.75L16.5 17.442L13.2801 14.2244L13.196 14.1518C12.9023 13.9341 12.4856 13.9585 12.2194 14.2248C11.9267 14.5179 11.9269 14.9927 12.2199 15.2855L16.7237 19.7855L16.8078 19.8581C17.1015 20.0758 17.5182 20.0514 17.7843 19.7851L22.2806 15.2851L22.3531 15.2009C22.5709 14.9072 22.5465 14.4905 22.2801 14.2244L22.196 14.1518C21.9023 13.9341 21.4856 13.9585 21.2194 14.2248L18 17.446L18.0009 4.75L17.994 4.64823C17.9444 4.28215 17.6306 4 17.2509 4ZM6.21441 4.21969L1.71965 8.71474L1.64704 8.79886C1.42919 9.09248 1.45341 9.50914 1.71969 9.7754L1.80381 9.84802C2.09743 10.0659 2.51409 10.0416 2.78035 9.77537L5.997 6.55711L5.99766 19.2549L6.00451 19.3567C6.05417 19.7228 6.36797 20.0049 6.74766 20.0049L6.84943 19.9981C7.21551 19.9484 7.49766 19.6346 7.49766 19.2549L7.497 6.55911L10.7199 9.77596L10.8041 9.84849C11.0979 10.066 11.5145 10.0414 11.7805 9.77481C12.0731 9.4816 12.0726 9.00672 11.7794 8.71415L7.27451 4.21909L7.19038 4.14661C6.89676 3.9292 6.48047 3.95361 6.21441 4.21969Z"
             />
+          </svg>
+        </a>
+
+        <div class="submenu">
+          <a href="#">Ver Todos</a>
+          <a href="#">Criar Novo</a>
+        </div>
+      </li>
+
+      <!-- contratos -->
+      <li class="item" id="mn3">
+        <a class="btn" href="#mn3">
+          <svg
+            viewBox="0 0 384 512"
+            class="w-3 mr-2 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              d="M54.767,29.868L32.001,7.103l-10.74,10.739v-4.726c0-1.104-0.896-2-2-2s-2,0.896-2,2v8.726l-8.027,8.026   c-0.977,0.977-0.977,2.56,0,3.536c0.488,0.488,1.128,0.732,1.768,0.732s1.279-0.244,1.768-0.731l19.232-19.23l19.23,19.229   c0.977,0.977,2.559,0.977,3.535,0C55.743,32.427,55.743,30.844,54.767,29.868z"
+              d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zM64 72c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8V72zm0 64c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zm192.81 248H304c8.84 0 16 7.16 16 16s-7.16 16-16 16h-47.19c-16.45 0-31.27-9.14-38.64-23.86-2.95-5.92-8.09-6.52-10.17-6.52s-7.22.59-10.02 6.19l-7.67 15.34a15.986 15.986 0 0 1-14.31 8.84c-.38 0-.75-.02-1.14-.05-6.45-.45-12-4.75-14.03-10.89L144 354.59l-10.61 31.88c-5.89 17.66-22.38 29.53-41 29.53H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h12.39c4.83 0 9.11-3.08 10.64-7.66l18.19-54.64c3.3-9.81 12.44-16.41 22.78-16.41s19.48 6.59 22.77 16.41l13.88 41.64c19.77-16.19 54.05-9.7 66 14.16 2.02 4.06 5.96 6.5 10.16 6.5zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"
             />
-          </g>
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-        </svg>
-        Imóveis</router-link
-      >
-      <router-link
-        class="
-          border-0
-          px-5
-          py-3
-          hover:border-l-4 hover:border-l-blue-600 hover:text-gray-100
-          flex
-          justify-start
-          items-center
-        "
-        to=""
-      >
-        <svg
-          viewBox="0 0 384 512"
-          class="w-3 mr-2 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zM64 72c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8V72zm0 64c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zm192.81 248H304c8.84 0 16 7.16 16 16s-7.16 16-16 16h-47.19c-16.45 0-31.27-9.14-38.64-23.86-2.95-5.92-8.09-6.52-10.17-6.52s-7.22.59-10.02 6.19l-7.67 15.34a15.986 15.986 0 0 1-14.31 8.84c-.38 0-.75-.02-1.14-.05-6.45-.45-12-4.75-14.03-10.89L144 354.59l-10.61 31.88c-5.89 17.66-22.38 29.53-41 29.53H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h12.39c4.83 0 9.11-3.08 10.64-7.66l18.19-54.64c3.3-9.81 12.44-16.41 22.78-16.41s19.48 6.59 22.77 16.41l13.88 41.64c19.77-16.19 54.05-9.7 66 14.16 2.02 4.06 5.96 6.5 10.16 6.5zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"
-          />
-        </svg>
-        Contratos</router-link
-      >
-      <router-link
-        class="
-          border-0
-          px-5
-          py-3
-          hover:border-l-4 hover:border-l-blue-600 hover:text-gray-100
-          flex
-          justify-start
-          items-center
-        "
-        to=""
-      >
-        <svg
-          class="w-5 mr-2 fill-current"
-          enable-background="new 0 0 48 48"
-          id="Layer_5"
-          version="1.1"
-          viewBox="0 0 48 48"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
-          <g>
-            <polygon
-              points="15.706,15.353 15.706,11.251 0.021,23.45 15.706,35.649 15.706,31.548 5.294,23.45  "
-            />
+          </svg>
+          Contratos
+          <svg
+            class="fill-gray-600 w-3 h-3 ml-auto"
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              d="M47.979,29.074c0-6.212-5.038-11.25-11.251-11.25h-0.001H25.479v-6.573L9.794,23.45l15.686,12.199v-6.575   h14.232c3.106,0,5.625,2.52,5.625,5.625c0,0.725-0.148,1.413-0.399,2.05C46.819,34.739,47.979,32.045,47.979,29.074z"
+              d="M17.2509 4L17.1491 4.00685C16.783 4.05651 16.5009 4.3703 16.5009 4.75L16.5 17.442L13.2801 14.2244L13.196 14.1518C12.9023 13.9341 12.4856 13.9585 12.2194 14.2248C11.9267 14.5179 11.9269 14.9927 12.2199 15.2855L16.7237 19.7855L16.8078 19.8581C17.1015 20.0758 17.5182 20.0514 17.7843 19.7851L22.2806 15.2851L22.3531 15.2009C22.5709 14.9072 22.5465 14.4905 22.2801 14.2244L22.196 14.1518C21.9023 13.9341 21.4856 13.9585 21.2194 14.2248L18 17.446L18.0009 4.75L17.994 4.64823C17.9444 4.28215 17.6306 4 17.2509 4ZM6.21441 4.21969L1.71965 8.71474L1.64704 8.79886C1.42919 9.09248 1.45341 9.50914 1.71969 9.7754L1.80381 9.84802C2.09743 10.0659 2.51409 10.0416 2.78035 9.77537L5.997 6.55711L5.99766 19.2549L6.00451 19.3567C6.05417 19.7228 6.36797 20.0049 6.74766 20.0049L6.84943 19.9981C7.21551 19.9484 7.49766 19.6346 7.49766 19.2549L7.497 6.55911L10.7199 9.77596L10.8041 9.84849C11.0979 10.066 11.5145 10.0414 11.7805 9.77481C12.0731 9.4816 12.0726 9.00672 11.7794 8.71415L7.27451 4.21909L7.19038 4.14661C6.89676 3.9292 6.48047 3.95361 6.21441 4.21969Z"
             />
-          </g>
-        </svg>
-        Ver Site</router-link
-      >
+          </svg>
+        </a>
+        <div class="submenu">
+          <a href="#">Ver Todos</a>
+          <a href="#">Criar Novo</a>
+        </div>
+      </li>
+
+      <!-- ver site -->
+      <li class="item">
+        <router-link
+          class="
+            btn
+            flex
+            p-4
+            relative
+            border-y-[1px] border-gray-800
+            justify-start
+            items-center
+          "
+          to=""
+        >
+          <svg
+            class="w-5 mr-2 fill-current"
+            enable-background="new 0 0 48 48"
+            id="Layer_5"
+            version="1.1"
+            viewBox="0 0 48 48"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g>
+              <polygon
+                points="15.706,15.353 15.706,11.251 0.021,23.45 15.706,35.649 15.706,31.548 5.294,23.45  "
+              />
+              <path
+                d="M47.979,29.074c0-6.212-5.038-11.25-11.251-11.25h-0.001H25.479v-6.573L9.794,23.45l15.686,12.199v-6.575   h14.232c3.106,0,5.625,2.52,5.625,5.625c0,0.725-0.148,1.413-0.399,2.05C46.819,34.739,47.979,32.045,47.979,29.074z"
+              />
+            </g>
+          </svg>
+          Ver Site</router-link
+        >
+      </li>
+
+      <!-- Sair -->
+      <li class="item">
+        <router-link
+          class="
+            btn
+            flex
+            p-4
+            relative
+            border-y-[1px] border-gray-800
+            justify-start
+            items-center
+            text-red-600
+            md:hidden
+          "
+          to=""
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 mr-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+            />
+          </svg>
+          Sair
+        </router-link>
+      </li>
     </div>
   </div>
 </template>
@@ -293,42 +291,67 @@
 <script>
 export default {
   name: "Menu",
-  props:{
-      urls:[
-          {title:"Dashboard", url:"/admin"},
-          {title:"Cliente", url:"/client"},
-      ]
-  }
 };
 </script>
 
 <style scoped>
-.active {
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.menu .btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: solid 1px #1b1b2f;
+  border-top: solid 1px #102136;
   position: relative;
 }
-.active::before {
-  content: "";
-  position: absolute;
 
-  background-color: transparent;
-  bottom: 47px;
-  right: 0;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  box-shadow: 21px 23px 0 0 #f8fafc;
+.menu .submenu {
+  overflow: hidden;
+  background: #252b36;
+  max-height: 0;
+  transition: max-height 0.8s ease-out;
 }
 
-.active::after {
-  content: "";
-  position: absolute;
+.menu .submenu a {
+  display: block;
+  padding: 1rem;
+  position: relative;
+}
 
-  background-color: transparent;
-  bottom: -58.4px;
-  right: 0;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  box-shadow: 16px -19px 0 0 #f8fafc;
+.menu .submenu a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: #0090e8;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.menu .submenu a:hover {
+  padding-left: calc(1rem + 5px);
+}
+
+.menu .submenu a:hover::before {
+  opacity: 1;
+}
+
+.item:target .submenu {
+  max-height: 20rem;
+}
+.item:hover {
+  border-left: 5px solid #0090e8;
+}
+
+.active {
+  border-left: 5px solid #0090e8;
 }
 </style>

@@ -2,23 +2,18 @@
 
 
   <div class="grid grid-cols-12">
-      <!-- Menu Lateral Web -->
-    <div class="hidden md:grid md:relative md:col-span-2 bg-gray-900 h-screen overflow-hidden text-gray-300 text-sm">
-      <Menu/>
+      <!-- Menu Lateral Web/Mobile -->
+    <div id="menu" class="hidden w-1/2 z-10 absolute md:grid md:relative md:w-full md:col-span-2 bg-gray-800 h-screen overflow-hidden text-gray-300 text-sm">
+        <p @click="close" class="absolute md:hidden right-5 top-5 text-red-600 font-semibold text-lg cursor-pointer p-2">x</p>
+        <Menu/>
     </div>
 
-    <!-- Menu Mobile -->
-    <div v-if="isClose" @click="isClose = !isClose" class="w-full h-screen bg-black bg-opacity-25 z-10 absolute overflow-hidden text-gray-300 text-sm">
-        <div class="w-1/2 bg-sky-900 h-screen z-20">
-            <Menu/>
-        </div>
-    </div>
     <!-- Menu Top -->
     <div class="col-span-12 md:col-span-10">
       <div
         class="bg-white shadow-md flex justify-start gap-6 md:justify-between items-center px-7 py-3"
       >
-        <button @click="isClose = !isClose" class="md:hidden bg-sky-700 hover:opacity-90 px-2 py-1 text-gray-50 rounded-sm">
+        <button @click="open" class="md:hidden bg-sky-700 hover:opacity-90 px-2 py-1 text-gray-50 rounded-sm">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -69,13 +64,24 @@
 
 <script>
 import Menu from './Menu.vue';
+
 export default {
   components: { Menu },
     name:"Header",
     data() {
         return{
-            isClose:false,
         }
+    },
+    methods:{
+      close(){
+        var menu = document.querySelector('#menu')
+        menu.classList.add('hidden')
+      },
+
+      open(){
+        var menu = document.querySelector('#menu')
+        menu.classList.remove('hidden')
+      }
     }
 };
 </script>

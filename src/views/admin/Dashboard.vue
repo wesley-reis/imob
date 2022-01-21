@@ -1,6 +1,15 @@
 <template>
-  <div class="text-blue-600 text-4xl">
-     <h1>Dashboard</h1>
+  <div class="">
+     <div>
+       <h2>Dashboard</h2>
+       <div>
+         <div>clientes</div>
+         <div>Imóveis</div>
+         <div>Contratos</div>
+       </div>
+     </div>
+     
+
   </div>
 </template>
 
