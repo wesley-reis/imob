@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 w-full h-screen font-OpenSans">
+  <div class="bg-gray-100 w-full h-full font-OpenSans">
     <Header>
       <router-view/>
     </Header>
