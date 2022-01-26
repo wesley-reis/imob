@@ -3,11 +3,14 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
+
+
 import VueSweetalert2 from "vue-sweetalert2";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 import "./assets/css/main.css";
 import "sweetalert2/dist/sweetalert2.min.css";
+
 
 const Toast = Swal.mixin({
   toast: true,
@@ -19,4 +22,8 @@ const Toast = Swal.mixin({
 
 window.Toast = Toast;
 
-createApp(App).use(store).use(VueSweetalert2).use(router).mount("#app");
+createApp(App)
+.use(store)
+.use(VueSweetalert2)
+.use(router)
+.mount("#app");

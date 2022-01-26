@@ -42,7 +42,11 @@
       Últimos Contratos Cadastrados
     </h2>
     <div class="grid grid-cols-1">
-      <div class="bg-white border border-gray-300 p-5 rounded-[4px]">tabela</div>
+      <div class="bg-white border border-gray-300 p-5 rounded-[4px]">
+        <!-- DataTable -->
+        <DataTable/>
+        <!-- End DataTable -->
+      </div>
     </div>
 
     <h2
@@ -67,17 +71,27 @@
     <div class="grid grid-cols-1">
       <div class="bg-white border border-gray-300 p-5 rounded-[4px]"></div>
     </div>
-    
   </div>
 </template>
 
 <script>
 import CardStatus from "../../components/Admin/dash/CardStatus.vue";
+import DataTable from "../../components/Admin/dash/DataTable.vue";
+
+
+
 export default {
-  components: { CardStatus },
+  components: { CardStatus, DataTable },
   name: "Dashboard",
+
+  data() {
+    return {
+      text:''
+    };
+  },
 };
 </script>
 
 <style>
+
 </style>
