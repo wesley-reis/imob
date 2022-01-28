@@ -69,7 +69,10 @@
       Últimos Imóveis Cadastrados
     </h2>
     <div class="grid grid-cols-1">
-      <div class="bg-white border border-gray-300 p-5 rounded-[4px]"></div>
+      <div class="bg-white border border-gray-300 p-5 rounded-[4px]">
+        <!-- NewTable Test -->
+        
+      </div>
     </div>
   </div>
 </template>
